@@ -1,0 +1,21 @@
+{
+    "name": "123dok/blog-reader-tintq",
+    "description": "Package for reading information from a BlogSpot/Wordpress blog",
+    "authors": [
+        {
+            "name": "Tran Quang Tin",
+            "email": "tranquangtin710@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Dok123\\BlogReader\\": "src/"
+        }
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.0"
+    }
+}
