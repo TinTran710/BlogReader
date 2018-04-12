@@ -6,9 +6,11 @@ Package hỗ trợ đọc các thông tin từ 1 blog thuộc loại Blogspot/Wo
 Khởi tạo:
 
 - Từ url. Nếu không tìm thấy blog thì trả về 1 exception BlogNotFoundException. Nếu tìm thấy thì trả về 1 trong 3 loại WpApiV1/WpApiV2/BlogSpot tương ứng
+- Có thể khởi tạo kèm API Key mong muốn. Nếu không khai báo API key, package sẽ sử dụng API Key có sẵn.
 
 ```
 $blog = BlogReader::fromUrl($url);
+$blog = BlogReader::fromUrl($url, $api_key = null);
 ```
 
 Đọc thông tin :
