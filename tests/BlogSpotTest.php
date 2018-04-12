@@ -4,7 +4,7 @@ use Dok123\BlogReader\BlogReader;
 use GuzzleHttp\Client;
 use PHPUnit\Framework\TestCase;
 
-class BlogReaderTest extends TestCase {
+class BlogSpotTest extends TestCase {
 
     public function testFromUrl() {
         $blog = BlogReader::fromUrl('http://tintran710.blogspot.com/');

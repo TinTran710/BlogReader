@@ -83,9 +83,20 @@ class WpApiV1 extends ReaderAbstract {
         $request = self::BASE_URL.$url.'/categories?number='.$limit;
         $arrayReponse = $this->makeHttpRequest($request);
         $labels = [];
+
         foreach($arrayReponse['categories'] as $item) {
             $labels[] = $item->name;
         }
+
+        if(count($labels) < $limit) {
+            $number = $limit - count($labels);
+            $request = self::BASE_URL.$url.'/tags?number='.$number;
+            $arrayReponse = $this->makeHttpRequest($request);
+            foreach($arrayReponse['tags'] as $item) {
+                $labels[] = $item->name;
+            }
+        }
+
         return $labels;
     }
 

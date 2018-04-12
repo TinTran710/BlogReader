@@ -3,13 +3,16 @@
 namespace Dok123\BlogReader\Adapter;
 use GuzzleHttp\Client;
 
-class BlogReader extends ReaderAbstract {
+class BlogSpot extends ReaderAbstract {
 
     const BASE_URL = 'https://www.googleapis.com/blogger/v3/blogs/';
     protected $api_key = 'AIzaSyBKjXhnrkKS-WT4wjtFPkYq2bn52gUUt0o';
     protected $page_token;
 
-    public function __construct($url) {
+    public function __construct($url, $api_key = null) {
+        if($api_key) {
+            $this->api_key = $api_key;
+        }
         $request = self::BASE_URL.'byurl?url='.$url.'/&key='.$this->api_key;
         $this->blog_info = $this->makeHttpRequest($request);
     }
