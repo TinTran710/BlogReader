@@ -1,7 +1,7 @@
 # BlogReader
+Package hỗ trợ đọc các thông tin từ 1 blog thuộc loại blogspot/wordpress
 
 ## Usage
-Package hỗ trợ đọc các thông tin từ 1 blog thuộc loại blogspot/wordpress
 
 Khởi tạo:
 
