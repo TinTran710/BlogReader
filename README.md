@@ -5,7 +5,7 @@ Package hỗ trợ đọc các thông tin từ 1 blog thuộc loại blogspot/wo
 
 Khởi tạo:
 
-- Từ url. Nếu không tìm thấy blog thì trả về 1 exception BlogNotFoundException. Nếu tìm thấy thì trả về 1 trong 3 loại WpApiV1/WpApiV2/BlogSpot(tự động detect loại)
+- Từ url. Nếu không tìm thấy blog thì trả về 1 exception BlogNotFoundException. Nếu tìm thấy thì trả về 1 trong 3 loại WpApiV1/WpApiV2/BlogSpot tương ứng
 
 ```
 $blog = BlogReader::fromUrl($url);
@@ -13,7 +13,7 @@ $blog = BlogReader::fromUrl($url);
 
 Đọc thông tin :
 
-- Get info `$blog->getInfo()` lấy thông tin blog. là array chứa các thông tin có thể lấy được từ api
+- Get info `$blog->getInfo()` lấy thông tin blog. Kết quả là array chứa các thông tin có thể lấy được từ api
 
 - Get các bài viết
 
